@@ -1,0 +1,108 @@
+h1 {
+  font-family: "Rubik", sans-serif;
+  font-size: 35px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  color: var(--white-90);
+}
+
+h2 {
+  font-family: "Rubik", sans-serif;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  color: var(--white-90);
+}
+
+h3 {
+  font-family: "Rubik", sans-serif;
+  font-size: 21px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  color: var(--white-90);
+}
+
+h4 {
+  font-family: "Rubik", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  color: var(--white-90);
+}
+
+h5 {
+  font-family: "Rubik", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  color: var(--white-90);
+}
+
+p {
+  font-family: "Rubik", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  color: var(--white-60);
+}
+
+small {
+  font-family: "Rubik", sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  padding: 2px 0;
+  color: var(--white-40);
+}
+
+label {
+  font-family: "Rubik", sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  padding: 2px 0;
+  color: var(--white-40);
+}
+
+/* ===== Font Style Utilities ===== */
+.italic {
+  font-style: italic;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.medium {
+  font-weight: 500;
+}
+
+.regular {
+  font-weight: 400;
+}
+
+/* ===== Font Color Utilities ===== */
+
+.color-active {
+  color: var(--white-90);
+}
+
+.color-default {
+  color: var(--white-60);
+}
+
+.color-dark {
+  color: var(--white-40);
+}
+
+.color-placeholder {
+  color: var(--white-20);
+}

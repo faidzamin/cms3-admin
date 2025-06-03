@@ -1,0 +1,600 @@
+/* ============================================================ */
+/* CONTAINERS                                                   */
+/* ============================================================ */
+
+/* Containers - Global */
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-100);
+  background-image: radial-gradient(var(--white-5) 1px, transparent 0);
+  background-size: 10px 10px;
+  background-position: top;
+  display: flex;
+  min-height: 100vh;
+  flex: 1;
+  font-family: "Rubik", sans-serif;
+  overflow: hidden;
+}
+
+main {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+.top-bar {
+  background-color: var(--bg-100);
+  padding: 12px 16px;
+  display: flex;
+  width: 100%;
+  height: auto;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid var(--border);
+}
+
+.left-bar {
+  background-color: var(--bg-100);
+  padding: 12px;
+  min-width: 240px;
+  max-width: 240px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  height: 100%;
+  border-right: 1px solid var(--border);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  padding: 60px 0;
+  width: 100%;
+  flex: 1;
+  gap: 60px;
+  align-items: center;
+  overflow: hidden auto;
+}
+
+.section {
+  max-width: 1120px;
+  width: 100%; /* Ensure section takes available width */
+}
+
+/* Base Container Classes */
+.container {
+  display: flex;
+  flex-shrink: 1; /* Default flex-shrink value */
+  width: 100%; /* Default width */
+}
+
+.container-column {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 1;
+  width: 100%;
+}
+
+.container-row {
+  display: flex;
+  flex-direction: row;
+  flex: 1; /* Adjust based on usage, might need to be more specific or removed */
+  height: auto;
+}
+
+/* Gap Utilities */
+.gap-0 {
+  gap: 0px;
+}
+.gap-2 {
+  gap: 2px;
+}
+.gap-4 {
+  gap: 4px;
+}
+.gap-8 {
+  gap: 8px;
+}
+.gap-12 {
+  gap: 12px;
+}
+.gap-16 {
+  gap: 16px;
+}
+.gap-24 {
+  gap: 24px;
+}
+.gap-32 {
+  gap: 32px;
+}
+
+/* Containers - Utilities */
+
+.padding-0 {
+  padding: 0;
+}
+
+.transparent {
+  opacity: 0;
+}
+
+.fullwidth {
+  width: 100%;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.center {
+  justify-content: center;
+}
+
+/* ============================================================ */
+/* CARDS                                                        */
+/* ============================================================ */
+
+/* Cards - Container */
+
+.card-column-0px {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 1;
+  width: 100%;
+  gap: 0px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: var(--bg-200);
+  cursor: pointer;
+}
+
+.card-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.card-column-0px:hover {
+  background-color: var(--bg-200-hover);
+}
+
+/* Cards - Status */
+
+.card-status-none {
+  height: 42px;
+  background-color: var(--white-10);
+}
+
+/* Cards - Icons */
+
+.card-title-icon {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background-color: var(--bg-200);
+}
+
+.card-title-icon .icon {
+  font-size: 28px;
+  color: var(--white-90);
+}
+
+/* Cards - Content */
+
+.card-menu-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 32px 16px 16px;
+}
+
+/* Override for cards within a flex row to share space */
+.container-row > .card-column-0px {
+  flex: 1 1 0px; /* Shorthand for grow, shrink, basis. Basis of 0px allows equal sharing. */
+  min-width: 0; /* Allow items to shrink smaller than their content's intrinsic width. */
+  /* This will override the 'width: 100%' from the base .card-column-0px for flex sizing purposes. */
+}
+
+/* ============================================================ */
+/* ELEMENTS                                                     */
+/* ============================================================ */
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  line-height: 1;
+  color: var(--white-90);
+}
+
+/* ============================================================ */
+/* BUTTONS                                                      */
+/* ============================================================ */
+
+/* Base Button Style */
+.btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: "Rubik", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  border: 1px solid transparent; /* Base border, can be overridden */
+}
+
+.btn span {
+  padding: 2.5px 0;
+}
+
+.btn .icon {
+  font-size: 22px;
+}
+
+/* Button - Primary */
+.btn-primary {
+  background: var(--blue-100);
+  border-color: var(--white-0);
+  color: var(--white-90);
+}
+
+.btn-primary:hover {
+  background-color: var(--blue-80);
+}
+
+/* Button - Ghost */
+.btn-ghost {
+  background: none;
+  border-color: var(--white-0);
+  color: var(--white-60);
+}
+
+.btn-ghost:hover {
+  background-color: var(--white-10);
+}
+
+/* Button - Outline */
+.btn-outline {
+  background: none;
+  border-color: var(--border);
+  color: var(--white-60);
+}
+
+.btn-outline:hover {
+  background-color: var(--white-5);
+}
+
+/* Button - Menu */
+.btn-menu {
+  background: none;
+  border-color: var(--white-0);
+  color: var(--white-60);
+}
+
+.btn-menu:hover {
+  background-color: var(--white-5);
+}
+
+.btn-menu.active {
+  background-color: var(--white-10);
+  color: var(--white-90);
+}
+
+/* ============================================================ */
+/* LINKS                                                        */
+/* ============================================================ */
+
+.link-icon {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: "Rubik", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  color: var(--white-60);
+}
+
+.link-icon span {
+  padding: 2.5px 0;
+}
+
+.link-icon .icon {
+  font-size: 22px;
+  color: var(--white-60);
+}
+
+.link-icon:hover {
+  color: var(--white-90);
+}
+
+.link-icon:hover .icon {
+  color: var(--white-90);
+}
+
+/* ============================================================ */
+/* TABLES                                                       */
+/* ============================================================ */
+
+.table-wrapper {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: "Rubik", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  color: var(--white-90);
+  background-color: var(--bg-200);
+  border: none;
+}
+
+.table thead {
+  background-color: var(--white-10);
+  border-bottom: 1px solid var(--border);
+}
+
+.table thead th {
+  text-align: left;
+  font-weight: 400;
+  padding: 12px 16px;
+  color: var(--white-40);
+  white-space: nowrap;
+}
+
+.table tbody tr {
+  border-bottom: 1px solid var(--border);
+}
+
+.table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.table tbody td {
+  padding: 12px 16px;
+  color: var(--white-90);
+  vertical-align: middle;
+}
+
+.table tbody tr:hover {
+  background-color: var(--white-5);
+}
+
+/* Utilities */
+
+.cell-center {
+  display: flex;
+  justify-content: center;
+}
+
+.cell-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+
+.cell-end {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 8px;
+}
+
+.cell-start {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 8px;
+}
+
+.cell-nowrap {
+  white-space: nowrap;
+}
+
+.cell-actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+/* ============================================================ */
+/* INPUT FIELDS                                                 */
+/* ============================================================ */
+
+/* Input Field - Select */
+
+.dropdown {
+  position: relative;
+  font-family: "Rubik", sans-serif;
+}
+
+.dropdown-toggle {
+  width: 100%;
+  padding: 6px 12px;
+  background-color: var(--bg-200);
+  color: var(--white-90);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.dropdown-toggle:hover {
+  border: 1px solid var(--white-40);
+}
+
+.dropdown-toggle.focused {
+  border-color: var(--blue-100);
+}
+
+.dropdown-toggle span {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  color: var(--white-60);
+  line-height: normal;
+  padding: 2.5px 0;
+}
+
+.dropdown-toggle span.selected {
+  color: var(--white-90);
+}
+
+.dropdown-toggle .icon {
+  font-size: 22px;
+  color: var(--white-60);
+}
+
+.dropdown-menu {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  margin-top: 8px;
+  padding: 6px;
+  background-color: var(--bg-200);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  z-index: 10;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown-menu.open {
+  display: flex;
+}
+
+.dropdown-menu li {
+  min-height: 36px;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  padding: 6px 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--white-60);
+  border-radius: 6px;
+}
+
+.dropdown-menu li.selected {
+  color: var(--blue-100);
+}
+
+.dropdown-menu li .icon {
+  font-size: 22px;
+  color: var(--white-60);
+}
+
+.dropdown-menu li:hover {
+  background-color: var(--white-5);
+}
+
+.selected-content {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.rotate-180 {
+  transform: rotate(180deg);
+  transition: transform 0.2s ease;
+}
+
+/* ============================================================ */
+/* MODAL POPUP                                                  */
+/* ============================================================ */
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.modal {
+  background-color: var(--bg-200);
+  padding: 32px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  width: 480px;
+  max-width: 90vw;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+.input-field {
+  background-color: var(--bg-100);
+  border: 1px solid var(--border);
+  color: var(--white-90);
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-family: "Rubik", sans-serif;
+}
+
+.input-field:focus {
+  outline: 2px solid var(--blue-100);
+}
+
+.label {
+  font-family: "Rubik", sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  padding: 2px 0;
+  color: var(--white-60);
+}
+
+.hidden {
+  display: none;
+}

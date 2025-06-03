@@ -1,0 +1,72 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+---
+description: Rules and guidelines for the CMS3 Admin project
+globs: 
+  - pages/**/*.php
+  - partials/components/**/*.php
+  - scripts/**/*.js
+  - styles/**/*.css
+alwaysApply: true
+rules:
+  - name: Directory Structure
+    description: >
+      Ensure all files are placed in their respective directories:
+      - Page-specific PHP files in `pages/`
+      - Reusable components in `partials/components/`
+      - JavaScript files in `scripts/`
+      - CSS files in `styles/`
+
+  - name: File Naming Conventions
+    description: >
+      Use lowercase letters and hyphens for file names.
+      Ensure names are descriptive of the file's purpose.
+
+  - name: PHP Includes
+    description: >
+      Use consistent paths for including partials.
+      Utilize a configuration file for common settings and paths.
+
+  - name: CSS and JavaScript
+    description: >
+      Use CSS variables for theming and colors.
+      Implement event delegation in JavaScript for performance.
+
+  - name: Accessibility
+    description: >
+      Use ARIA roles and labels for accessibility.
+      Ensure all interactive elements are keyboard navigable.
+
+  - name: Version Control
+    description: >
+      Commit changes frequently with descriptive messages.
+      Use branches for new features or major changes.
+
+  - name: Code Style
+    description: >
+      Follow consistent coding styles across the project:
+      - Use 2 spaces for indentation in HTML, CSS, and JavaScript.
+      - Use 4 spaces for indentation in PHP.
+      - Use single quotes for strings in PHP and JavaScript.
+      - Use camelCase for variable and function names in JavaScript.
+      - Use PascalCase for class names in PHP.
+
+  - name: Commenting
+    description: >
+      Ensure comments are utilized and used across the code for better visibility:
+      - Use comments to explain complex logic and code blocks.
+      - Include a comment header for each file with a brief description of its purpose.
+      - Use TODO comments to indicate areas for future improvement.
+
+  - name: Documentation
+    description: >
+      Maintain documentation for the project:
+      - Document all functions and classes with PHPDoc or JSDoc.
+      - Keep a changelog for major updates and features.
+      - Maintain a README file with setup instructions and project overview.
+
+
+---
