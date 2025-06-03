@@ -89,8 +89,8 @@ include('../partials/components/left-bar.php');
               <td>Version 1</td>
               <td>2025-05-31</td>
               <td class="cell-center cell-actions">
-                <button class="btn btn-primary fullwidth center" data-role="open-edit-policy">Edit</button>
-                <button class="btn btn-outline fullwidth center">Logs</button>
+                <button class="btn btn-primary fullwidth center" data-role="open-edit-policy"><span>Edit</span></button>
+                <button class="btn btn-outline fullwidth center"><span>Logs</span></button>
               </td>
             </tr>
             <!-- Example Table Row 2 (Replace with dynamic data) -->
@@ -101,8 +101,8 @@ include('../partials/components/left-bar.php');
               <td>Version 1</td>
               <td>2025-05-31</td>
               <td class="cell-center cell-actions">
-                <button class="btn btn-primary fullwidth center">Edit</button>
-                <button class="btn btn-outline fullwidth center">Logs</button>
+                <button class="btn btn-primary fullwidth center"><span>Edit</span></button>
+                <button class="btn btn-outline fullwidth center"><span>Logs</span></button>
               </td>
             </tr>
             <!-- Example Table Row 3 (Replace with dynamic data) -->
@@ -113,8 +113,8 @@ include('../partials/components/left-bar.php');
               <td>Version 1</td>
               <td>2025-05-31</td>
               <td class="cell-center cell-actions">
-                <button class="btn btn-primary fullwidth center">Edit</button>
-                <button class="btn btn-outline fullwidth center">Logs</button>
+                <button class="btn btn-primary fullwidth center"><span>Edit</span></button>
+                <button class="btn btn-outline fullwidth center"><span>Logs</span></button>
               </td>
             </tr>
             <!-- Example Table Row 4 (Replace with dynamic data) -->
@@ -125,8 +125,8 @@ include('../partials/components/left-bar.php');
               <td>Version 1</td>
               <td>2025-05-31</td>
               <td class="cell-center cell-actions">
-                <button class="btn btn-primary fullwidth center">Edit</button>
-                <button class="btn btn-outline fullwidth center">Logs</button>
+                <button class="btn btn-primary fullwidth center"><span>Edit</span></button>
+                <button class="btn btn-outline fullwidth center"><span>Logs</span></button>
               </td>
             </tr>
             <!-- Example Table Row 5 (Replace with dynamic data) -->
@@ -137,8 +137,8 @@ include('../partials/components/left-bar.php');
               <td>Version 1</td>
               <td>2025-05-31</td>
               <td class="cell-center cell-actions">
-                <button class="btn btn-primary fullwidth center">Edit</button>
-                <button class="btn btn-outline fullwidth center">Logs</button>
+                <button class="btn btn-primary fullwidth center"><span>Edit</span></button>
+                <button class="btn btn-outline fullwidth center"><span>Logs</span></button>
               </td>
             </tr>
           </tbody>
@@ -154,7 +154,7 @@ include('../partials/components/left-bar.php');
     <!-- Modal Header: Title and Close Button -->
     <div class="modal-header space-between">
       <h2>Edit Policy</h2>
-      <button class="btn btn-ghost modal-close">✕</button>
+      <button class="btn btn-ghost modal-close"><span>✕</span></button>
     </div>
     <!-- Modal Body: Edit Policy Form -->
     <div class="modal-body container-column gap-16">
@@ -194,8 +194,8 @@ Foreign nationals enrolled in Ugandan educational institutions are eligible for 
     </div>
     <!-- Modal Footer: Action Buttons -->
     <div class="modal-footer container-row gap-16 space-between">
-      <button class="btn btn-primary">Update Policy</button>
-      <button class="btn btn-outline modal-close">Cancel</button>
+      <button class="btn btn-primary"><span>Update Policy</span></button>
+      <button class="btn btn-outline modal-close"><span>Cancel</span></button>
     </div>
   </div>
 </div>
