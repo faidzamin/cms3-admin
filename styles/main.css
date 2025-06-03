@@ -1,8 +1,6 @@
-/* ============================================================ */
-/* CONTAINERS                                                   */
-/* ============================================================ */
-
-/* Containers - Global */
+/* ====================================================================
+   GLOBAL STYLES
+   ==================================================================== */
 
 body {
   margin: 0;
@@ -62,14 +60,18 @@ main {
 
 .section {
   max-width: 1120px;
-  width: 100%; /* Ensure section takes available width */
+  width: 100%;
 }
+
+/* ====================================================================
+   LAYOUT UTILITIES
+   ==================================================================== */
 
 /* Base Container Classes */
 .container {
   display: flex;
-  flex-shrink: 1; /* Default flex-shrink value */
-  width: 100%; /* Default width */
+  flex-shrink: 1;
+  width: 100%;
 }
 
 .container-column {
@@ -82,7 +84,7 @@ main {
 .container-row {
   display: flex;
   flex-direction: row;
-  flex: 1; /* Adjust based on usage, might need to be more specific or removed */
+  flex: 1;
   height: auto;
 }
 
@@ -112,33 +114,26 @@ main {
   gap: 32px;
 }
 
-/* Containers - Utilities */
-
+/* General Alignment & Sizing Utilities */
 .padding-0 {
   padding: 0;
 }
-
 .transparent {
   opacity: 0;
 }
-
 .fullwidth {
   width: 100%;
 }
-
 .space-between {
   justify-content: space-between;
 }
-
 .center {
   justify-content: center;
 }
 
-/* ============================================================ */
-/* CARDS                                                        */
-/* ============================================================ */
-
-/* Cards - Container */
+/* ====================================================================
+   COMPONENT: CARDS
+   ==================================================================== */
 
 .card-column-0px {
   position: relative;
@@ -163,14 +158,10 @@ main {
   background-color: var(--bg-200-hover);
 }
 
-/* Cards - Status */
-
 .card-status-none {
   height: 42px;
   background-color: var(--white-10);
 }
-
-/* Cards - Icons */
 
 .card-title-icon {
   position: absolute;
@@ -191,8 +182,6 @@ main {
   color: var(--white-90);
 }
 
-/* Cards - Content */
-
 .card-menu-content {
   display: flex;
   flex-direction: column;
@@ -200,18 +189,15 @@ main {
   padding: 32px 16px 16px;
 }
 
-/* Override for cards within a flex row to share space */
 .container-row > .card-column-0px {
-  flex: 1 1 0px; /* Shorthand for grow, shrink, basis. Basis of 0px allows equal sharing. */
-  min-width: 0; /* Allow items to shrink smaller than their content's intrinsic width. */
-  /* This will override the 'width: 100%' from the base .card-column-0px for flex sizing purposes. */
+  flex: 1 1 0px;
+  min-width: 0;
 }
 
-/* ============================================================ */
-/* ELEMENTS                                                     */
-/* ============================================================ */
+/* ====================================================================
+   COMPONENT: LOGO
+   ==================================================================== */
 
-/* Logo */
 .logo {
   display: flex;
   align-items: center;
@@ -219,11 +205,10 @@ main {
   color: var(--white-90);
 }
 
-/* ============================================================ */
-/* BUTTONS                                                      */
-/* ============================================================ */
+/* ====================================================================
+   COMPONENT: BUTTONS
+   ==================================================================== */
 
-/* Base Button Style */
 .btn {
   display: flex;
   align-items: center;
@@ -236,7 +221,7 @@ main {
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  border: 1px solid transparent; /* Base border, can be overridden */
+  border: 1px solid transparent;
 }
 
 .btn span {
@@ -247,7 +232,6 @@ main {
   font-size: 22px;
 }
 
-/* Button - Primary */
 .btn-primary {
   background: var(--blue-100);
   border-color: var(--white-0);
@@ -258,7 +242,6 @@ main {
   background-color: var(--blue-80);
 }
 
-/* Button - Ghost */
 .btn-ghost {
   background: none;
   border-color: var(--white-0);
@@ -269,7 +252,6 @@ main {
   background-color: var(--white-10);
 }
 
-/* Button - Outline */
 .btn-outline {
   background: none;
   border-color: var(--border);
@@ -280,7 +262,6 @@ main {
   background-color: var(--white-5);
 }
 
-/* Button - Menu */
 .btn-menu {
   background: none;
   border-color: var(--white-0);
@@ -296,9 +277,9 @@ main {
   color: var(--white-90);
 }
 
-/* ============================================================ */
-/* LINKS                                                        */
-/* ============================================================ */
+/* ====================================================================
+   COMPONENT: LINKS
+   ==================================================================== */
 
 .link-icon {
   display: inline-flex;
@@ -329,9 +310,9 @@ main {
   color: var(--white-90);
 }
 
-/* ============================================================ */
-/* TABLES                                                       */
-/* ============================================================ */
+/* ====================================================================
+   COMPONENT: TABLES
+   ==================================================================== */
 
 .table-wrapper {
   border: 1px solid var(--border);
@@ -383,11 +364,11 @@ main {
   background-color: var(--white-5);
 }
 
-/* Utilities */
-
+/* Table Cell Utilities */
 .cell-center {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .cell-between {
@@ -422,11 +403,9 @@ main {
   gap: 8px;
 }
 
-/* ============================================================ */
-/* INPUT FIELDS                                                 */
-/* ============================================================ */
-
-/* Input Field - Select */
+/* ====================================================================
+   COMPONENT: DROPDOWNS
+   ==================================================================== */
 
 .dropdown {
   position: relative;
@@ -531,9 +510,9 @@ main {
   transition: transform 0.2s ease;
 }
 
-/* ============================================================ */
-/* MODAL POPUP                                                  */
-/* ============================================================ */
+/* ====================================================================
+   COMPONENT: MODALS
+   ==================================================================== */
 
 .modal-overlay {
   position: fixed;
@@ -572,6 +551,10 @@ main {
   align-items: center;
 }
 
+/* ====================================================================
+   COMPONENT: INPUT FIELDS & LABELS
+   ==================================================================== */
+
 .input-field {
   background-color: var(--bg-100);
   border: 1px solid var(--border);
@@ -594,6 +577,10 @@ main {
   padding: 2px 0;
   color: var(--white-60);
 }
+
+/* ====================================================================
+   UTILITY: MISCELLANEOUS
+   ==================================================================== */
 
 .hidden {
   display: none;

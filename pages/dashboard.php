@@ -7,25 +7,23 @@ include('../partials/components/left-bar.php');
 <main>
   <?php include('../partials/components/top-bar.php'); ?>
   <div class="content">
-    <!-- Section 1 -->
+    <!-- Section 1: Main Dashboard Content -->
     <section class="section container-column gap-32">
-      <!-- Title Row -->
+      <!-- Title Row: User Welcome -->
       <div class="container-column gap-12">
         <p>Welcome</p>
         <h1>Sharifudin Hashim</h1>
       </div>
-      <!-- Card Group Row -->
+
+      <!-- Card Group: Dashboard Menu Cards -->
       <div class="container-column gap-16">
-        <!-- Card Row 1 -->
+        <!-- Card Row 1: Core Policy & Q&A Actions -->
         <div class="container-row gap-16">
-          <!-- Card 1 -->
+          <!-- Manage Policies Card -->
           <a href="manage-policies.php" class="card-column-0px card-link">
             <div class="card-status-none"></div>
             <div class="card-title-icon">
-              <iconify-icon
-                icon="material-symbols:policy-outline-rounded"
-                class="icon"
-              ></iconify-icon>
+              <iconify-icon icon="material-symbols:policy-outline-rounded" class="icon"></iconify-icon>
             </div>
             <div class="card-menu-content">
               <div class="container-column gap-4">
@@ -33,23 +31,17 @@ include('../partials/components/left-bar.php');
                 <h2>20</h2>
                 <div class="container-row gap-8">
                   <small class="fullwidth">Policies</small>
-                  <iconify-icon
-                    icon="material-symbols:arrow-forward-rounded"
-                    class="icon"
-                    style="color: var(--white-90)"
-                  ></iconify-icon>
+                  <iconify-icon icon="material-symbols:arrow-forward-rounded" class="icon" style="color: var(--white-90)"></iconify-icon>
                 </div>
               </div>
             </div>
           </a>
-          <!-- Card 2 -->
+
+          <!-- Compare Policies Card -->
           <div class="card-column-0px">
             <div class="card-status-none"></div>
             <div class="card-title-icon">
-              <iconify-icon
-                icon="material-symbols:text-compare-outline-rounded"
-                class="icon"
-              ></iconify-icon>
+              <iconify-icon icon="material-symbols:text-compare-outline-rounded" class="icon"></iconify-icon>
             </div>
             <div class="card-menu-content">
               <div class="container-column gap-4">
@@ -57,23 +49,17 @@ include('../partials/components/left-bar.php');
                 <h2 class="transparent">00</h2>
                 <div class="container-row gap-8">
                   <small class="fullwidth transparent">Description</small>
-                  <iconify-icon
-                    icon="material-symbols:arrow-forward-rounded"
-                    class="icon"
-                    style="color: var(--white-90)"
-                  ></iconify-icon>
+                  <iconify-icon icon="material-symbols:arrow-forward-rounded" class="icon" style="color: var(--white-90)"></iconify-icon>
                 </div>
               </div>
             </div>
           </div>
-          <!-- Card 3 -->
+
+          <!-- Ask Questions Card -->
           <div class="card-column-0px">
             <div class="card-status-none"></div>
             <div class="card-title-icon">
-              <iconify-icon
-                icon="material-symbols:help-outline-rounded"
-                class="icon"
-              ></iconify-icon>
+              <iconify-icon icon="material-symbols:help-outline-rounded" class="icon"></iconify-icon>
             </div>
             <div class="card-menu-content">
               <div class="container-column gap-4">
@@ -81,23 +67,17 @@ include('../partials/components/left-bar.php');
                 <h2 class="transparent">00</h2>
                 <div class="container-row gap-8">
                   <small class="fullwidth transparent">Description</small>
-                  <iconify-icon
-                    icon="material-symbols:arrow-forward-rounded"
-                    class="icon"
-                    style="color: var(--white-90)"
-                  ></iconify-icon>
+                  <iconify-icon icon="material-symbols:arrow-forward-rounded" class="icon" style="color: var(--white-90)"></iconify-icon>
                 </div>
               </div>
             </div>
           </div>
-          <!-- Card 4 -->
+
+          <!-- Q&A Stats Card -->
           <div class="card-column-0px">
             <div class="card-status-none"></div>
             <div class="card-title-icon">
-              <iconify-icon
-                icon="material-symbols:insert-chart-outline-rounded"
-                class="icon"
-              ></iconify-icon>
+              <iconify-icon icon="material-symbols:insert-chart-outline-rounded" class="icon"></iconify-icon>
             </div>
             <div class="card-menu-content">
               <div class="container-column gap-4">
@@ -105,26 +85,20 @@ include('../partials/components/left-bar.php');
                 <h2 class="transparent">00</h2>
                 <div class="container-row gap-8">
                   <small class="fullwidth transparent">Description</small>
-                  <iconify-icon
-                    icon="material-symbols:arrow-forward-rounded"
-                    class="icon"
-                    style="color: var(--white-90)"
-                  ></iconify-icon>
+                  <iconify-icon icon="material-symbols:arrow-forward-rounded" class="icon" style="color: var(--white-90)"></iconify-icon>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <!-- Card Row 2 -->
+
+        <!-- Card Row 2: Secondary Q&A and User Management -->
         <div class="container-row gap-16">
-          <!-- Card 1 -->
+          <!-- Q&A by Policy Card -->
           <div class="card-column-0px">
             <div class="card-status-none"></div>
             <div class="card-title-icon">
-              <iconify-icon
-                icon="material-symbols:shield-question-outline-rounded"
-                class="icon"
-              ></iconify-icon>
+              <iconify-icon icon="material-symbols:shield-question-outline-rounded" class="icon"></iconify-icon>
             </div>
             <div class="card-menu-content">
               <div class="container-column gap-4">
@@ -132,23 +106,17 @@ include('../partials/components/left-bar.php');
                 <h2 class="transparent">00</h2>
                 <div class="container-row gap-8">
                   <small class="fullwidth transparent">Description</small>
-                  <iconify-icon
-                    icon="material-symbols:arrow-forward-rounded"
-                    class="icon"
-                    style="color: var(--white-90)"
-                  ></iconify-icon>
+                  <iconify-icon icon="material-symbols:arrow-forward-rounded" class="icon" style="color: var(--white-90)"></iconify-icon>
                 </div>
               </div>
             </div>
           </div>
-          <!-- Card 2 -->
+
+          <!-- Add Users Card -->
           <div class="card-column-0px">
             <div class="card-status-none"></div>
             <div class="card-title-icon">
-              <iconify-icon
-                icon="material-symbols:group-add-outline-rounded"
-                class="icon"
-              ></iconify-icon>
+              <iconify-icon icon="material-symbols:group-add-outline-rounded" class="icon"></iconify-icon>
             </div>
             <div class="card-menu-content">
               <div class="container-column gap-4">
@@ -156,25 +124,24 @@ include('../partials/components/left-bar.php');
                 <h2>5</h2>
                 <div class="container-row gap-8">
                   <small class="fullwidth">Users</small>
-                  <iconify-icon
-                    icon="material-symbols:arrow-forward-rounded"
-                    class="icon"
-                    style="color: var(--white-90)"
-                  ></iconify-icon>
+                  <iconify-icon icon="material-symbols:arrow-forward-rounded" class="icon" style="color: var(--white-90)"></iconify-icon>
                 </div>
               </div>
             </div>
           </div>
-          <!-- Card 3 -->
+
+          <!-- Placeholder Card 1 (for layout) -->
           <div class="card-column-0px transparent"></div>
-          <!-- Card 4 -->
+          <!-- Placeholder Card 2 (for layout) -->
           <div class="card-column-0px transparent"></div>
         </div>
       </div>
     </section>
 
-    <!-- Section 2 -->
-    <section class="section container-column gap-32"></section>
+    <!-- Section 2: Additional Dashboard Content (e.g., Recent Activity, Quick Links) -->
+    <section class="section container-column gap-32">
+      <!-- Content for Section 2 will go here -->
+    </section>
   </div>
 </main>
 

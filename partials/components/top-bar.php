@@ -1,6 +1,7 @@
 <nav class="top-bar">
+  <!-- Top Bar Inner Container (constrained width) -->
   <div class="container-row gap-0" style="max-width: 1120px">
-    <!-- Column 1 -->
+    <!-- Left Section: Back Navigation Link -->
     <a href="#" class="link-icon">
       <iconify-icon
         icon="material-symbols:arrow-back-rounded"
@@ -8,14 +9,15 @@
       ></iconify-icon>
       <span>Back</span>
     </a>
-    <!-- Column 2 -->
+
+    <!-- Right Section: User Info and Logout -->
     <div class="container-row gap-24" style="align-items: center">
-      <!-- Inner Column 1 -->
+      <!-- User Information Display -->
       <div class="container-column gap-0" style="text-align: right">
         <p class="color-active">Sharifudin Hashim</p>
         <small>Superadmin</small>
       </div>
-      <!-- Inner Column 2 -->
+      <!-- Logout Button -->
       <button class="btn btn-outline">
         <iconify-icon
           icon="material-symbols:logout"

@@ -1,10 +1,13 @@
+<!-- Left Sidebar Navigation -->
 <aside class="left-bar">
+  <!-- Logo Area -->
   <div class="logo" style="padding: 8px 12px;">
     <svg
       height="24"
       viewBox="0 0 216 60"
       fill="currentColor"
       xmlns="http://www.w3.org/2000/svg"
+      aria-label="CMS3 Logo"
     >
       <path
         d="M48 0H12C5.37 0 0 5.37 0 12V48C0 54.63 5.37 60 12 60H48C51.06 60 53.85 58.86 55.97 56.97C58.44 54.77 60 51.57 60 48V12C60 5.37 54.63 0 48 0ZM47.56 6.02C48.64 5.94 49.67 6.16 50.57 6.59C50.57 6.59 50.58 6.59 50.59 6.59C50.65 6.62 50.71 6.65 50.76 6.68C50.79 6.69 50.82 6.71 50.85 6.72C50.89 6.74 50.93 6.77 50.97 6.79C51.01 6.81 51.06 6.84 51.1 6.86C52.95 7.99 54.15 10.09 53.97 12.45C53.75 15.36 51.4 17.73 48.49 17.97C44.89 18.26 41.88 15.36 41.99 11.79C42.09 8.75 44.51 6.22 47.55 6L47.56 6.02ZM12 54C8.69 54 6 51.31 6 48V12C6 8.69 8.69 6 12 6H13.61C12.59 7.77 12 9.81 12 12V38.91C12 42.8 13.89 46.45 17.06 48.7L24.53 54H12ZM48.03 54H36.82C35.57 54 34.37 53.62 33.35 52.89L20.53 43.8C18.95 42.68 18 40.85 18 38.91V12C18 8.69 20.69 6 24 6H25.61C24.59 7.77 24 9.81 24 12V27C24 30.78 25.78 34.33 28.8 36.6L48.8 51.6C49.81 52.36 49.3 53.99 48.03 54ZM54 45.34C54 46.44 52.75 47.06 51.87 46.41L32.4 31.81C30.9 30.68 30 28.89 30 27.01V12.01C30 8.7 32.69 6.01 36 6.01H37.61C36.59 7.78 36 9.82 36 12.01C36 18.64 41.37 24.01 48 24.01C50.19 24.01 52.23 23.42 54 22.4V45.34Z"
@@ -36,7 +39,10 @@
       />
     </svg>
   </div>
+
+  <!-- Main Navigation Menu -->
   <nav class="container-column gap-4 padding-0">
+    <!-- Navigation Item: Dashboard -->
     <a href="dashboard.php" class="btn btn-menu">
       <iconify-icon
         icon="material-symbols:home-outline-rounded"
@@ -44,6 +50,7 @@
       ></iconify-icon>
       <span>Dashboard</span>
     </a>
+    <!-- Navigation Item: Manage Policies -->
     <a href="manage-policies.php" class="btn btn-menu">
       <iconify-icon
         icon="material-symbols:policy-outline-rounded"
@@ -51,6 +58,7 @@
       ></iconify-icon>
       <span>Manage Policies</span>
     </a>
+    <!-- Navigation Item: Compare Policies -->
     <button class="btn btn-menu">
       <iconify-icon
         icon="material-symbols:text-compare-outline-rounded"
@@ -58,6 +66,7 @@
       ></iconify-icon>
       <span>Compare Policies</span>
     </button>
+    <!-- Navigation Item: Ask Questions -->
     <button class="btn btn-menu">
       <iconify-icon
         icon="material-symbols:help-outline-rounded"
@@ -65,6 +74,7 @@
       ></iconify-icon>
       <span>Ask Questions</span>
     </button>
+    <!-- Navigation Item: Q&A Stats -->
     <button class="btn btn-menu">
       <iconify-icon
         icon="material-symbols:insert-chart-outline-rounded"
@@ -72,6 +82,7 @@
       ></iconify-icon>
       <span>Q&A Stats</span>
     </button>
+    <!-- Navigation Item: Q&A by Policy -->
     <button class="btn btn-menu">
       <iconify-icon
         icon="material-symbols:shield-question-outline-rounded"
@@ -79,6 +90,7 @@
       ></iconify-icon>
       <span>Q&A by Policy</span>
     </button>
+    <!-- Navigation Item: Add User -->
     <button class="btn btn-menu">
       <iconify-icon
         icon="material-symbols:group-add-outline-rounded"
