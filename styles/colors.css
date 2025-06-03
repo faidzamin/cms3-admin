@@ -1,8 +1,8 @@
 :root {
   /* BG */
-  --bg-100: #0c0a09;
-  --bg-200: #141211;
-  --bg-200-hover: #201e1d;
+  --bg-100: #0a0a0c;
+  --bg-200: #121214;
+  --bg-200-hover: #1e1e20;
 
   /* White - Transparent */
   --white-100: rgba(255, 255, 255, 1);
