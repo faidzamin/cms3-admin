@@ -10,7 +10,10 @@ include('../partials/components/left-bar.php');
     <!-- Section 1: Manage Policies Page Content -->
     <section class="section container-column gap-32">
       <!-- Page Title -->
-      <h1>Manage Policies</h1>
+      <div class="container-row gap-12 items-center">
+        <iconify-icon icon="material-symbols:policy-outline-rounded" class="title-icon"></iconify-icon>
+        <h1 style="margin: 0;">Manage Policies</h1>
+      </div>
 
       <!-- Action Bar: Controls for adding policies and filtering -->
       <div class="container-row gap-24 space-between">
