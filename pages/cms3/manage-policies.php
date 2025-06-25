@@ -1,11 +1,11 @@
 <?php
 $page_title = "Manage Policies";
-include('../partials/html-head.php');
-include('../partials/components/left-bar.php');
+include('../../partials/html-head.php');
+include('../../partials/components/left-bar/lb-policies.php');
 ?>
 
 <main>
-  <?php include('../partials/components/top-bar.php'); ?>
+  <?php include('../../partials/components/top-bar/tb-policies.php'); ?>
   <div class="content">
     <!-- Section 1: Manage Policies Page Content -->
     <section class="section container-column gap-32">
@@ -200,4 +200,4 @@ Foreign nationals enrolled in Ugandan educational institutions are eligible for 
   </div>
 </div>
 
-<?php include('../partials/html-foot.php'); ?>
+<?php include('../../partials/html-foot.php'); ?>

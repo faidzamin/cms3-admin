@@ -1,11 +1,11 @@
 <?php
 $page_title = "Dashboard";
-include('../partials/html-head.php');
-include('../partials/components/left-bar.php');
+include('../../partials/html-head.php');
+include('../../partials/components/left-bar/lb-policies.php');
 ?>
 
 <main>
-  <?php include('../partials/components/top-bar.php'); ?>
+  <?php include('../../partials/components/top-bar/tb-policies.php'); ?>
   <div class="content">
     <!-- Section 1: Main Dashboard Content -->
     <section class="section container-column gap-32">
@@ -145,4 +145,4 @@ include('../partials/components/left-bar.php');
   </div>
 </main>
 
-<?php include('../partials/html-foot.php'); ?>
+<?php include('../../partials/html-foot.php'); ?>
