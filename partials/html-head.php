@@ -10,11 +10,13 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
     rel="stylesheet" />
+
   <!-- Stylesheets -->
-  <link rel="stylesheet" href="../../styles/reset.css" />
-  <link rel="stylesheet" href="../../styles/colors.css" />
-  <link rel="stylesheet" href="../../styles/typography.css" />
-  <link rel="stylesheet" href="../../styles/main.css" />
+  <link rel="stylesheet" href="../../styles/reset.css?v=<?= time() ?>" />
+  <link rel="stylesheet" href="../../styles/colors.css?v=<?= time() ?>" />
+  <link rel="stylesheet" href="../../styles/typography.css?v=<?= time() ?>" />
+  <link rel="stylesheet" href="../../styles/main.css?v=<?= time() ?>" />
+
   <!-- Scripts -->
   <link rel="modulepreload" href="../../scripts/iconify-icon.min.js">
   <script type="module" src="../../scripts/iconify-icon.min.js"></script>
