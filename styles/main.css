@@ -28,6 +28,13 @@ main {
   flex-direction: column;
 }
 
+/* Login page specific main element styling */
+.main-login {
+  border: none;
+  margin: 0;
+  border-radius: 0;
+}
+
 .top-bar {
   background-color: var(--bg-100);
   padding: 12px 16px;
@@ -104,8 +111,8 @@ main {
 .container-row {
   display: flex;
   flex-direction: row;
-  flex: 1;
   height: auto;
+  width: 100%;
 }
 
 /* Gap Utilities */
@@ -154,12 +161,258 @@ main {
   align-items: center;
 }
 
-.title-icon {
-  font-size: 35px;
-  color: var(--white-90);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+/* Border Radius Utilities */
+.radius-0 {
+  border-radius: 0;
+}
+.radius-4 {
+  border-radius: 4px;
+}
+.radius-8 {
+  border-radius: 8px;
+}
+.radius-12 {
+  border-radius: 12px;
+}
+.radius-16 {
+  border-radius: 16px;
+}
+.radius-full {
+  border-radius: 9999px;
+}
+
+/* Border Utilities */
+.border-none {
+  border: none;
+}
+.border {
+  border: 1px solid var(--border);
+}
+.border-2 {
+  border: 2px solid var(--border);
+}
+.border-top {
+  border-top: 1px solid var(--border);
+}
+.border-right {
+  border-right: 1px solid var(--border);
+}
+.border-bottom {
+  border-bottom: 1px solid var(--border);
+}
+.border-left {
+  border-left: 1px solid var(--border);
+}
+
+/* Width & Height Utilities */
+.w-full {
+  width: 100%;
+}
+.w-auto {
+  width: auto;
+}
+.h-full {
+  height: 100%;
+}
+.h-auto {
+  height: auto;
+}
+
+/* Margin & Padding Utilities */
+.m-auto {
+  margin: auto;
+}
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Padding Utilities */
+.p-0 {
+  padding: 0;
+}
+.p-4 {
+  padding: 4px;
+}
+.p-8 {
+  padding: 8px;
+}
+.p-12 {
+  padding: 12px;
+}
+.p-16 {
+  padding: 16px;
+}
+.p-24 {
+  padding: 24px;
+}
+.p-32 {
+  padding: 32px;
+}
+
+/* Padding X-axis (left & right) */
+.px-4 {
+  padding-left: 4px;
+  padding-right: 4px;
+}
+.px-8 {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+.px-12 {
+  padding-left: 12px;
+  padding-right: 12px;
+}
+.px-16 {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+.px-24 {
+  padding-left: 24px;
+  padding-right: 24px;
+}
+.px-32 {
+  padding-left: 32px;
+  padding-right: 32px;
+}
+
+/* Padding Y-axis (top & bottom) */
+.py-4 {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+.py-8 {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+.py-12 {
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+.py-16 {
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+.py-24 {
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+.py-32 {
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+/* Individual Padding Sides */
+.pt-4 { padding-top: 4px; }
+.pt-8 { padding-top: 8px; }
+.pt-12 { padding-top: 12px; }
+.pt-16 { padding-top: 16px; }
+.pt-24 { padding-top: 24px; }
+.pt-32 { padding-top: 32px; }
+
+.pr-4 { padding-right: 4px; }
+.pr-8 { padding-right: 8px; }
+.pr-12 { padding-right: 12px; }
+.pr-16 { padding-right: 16px; }
+.pr-24 { padding-right: 24px; }
+.pr-32 { padding-right: 32px; }
+
+.pb-4 { padding-bottom: 4px; }
+.pb-8 { padding-bottom: 8px; }
+.pb-12 { padding-bottom: 12px; }
+.pb-16 { padding-bottom: 16px; }
+.pb-24 { padding-bottom: 24px; }
+.pb-32 { padding-bottom: 32px; }
+
+.pl-4 { padding-left: 4px; }
+.pl-8 { padding-left: 8px; }
+.pl-12 { padding-left: 12px; }
+.pl-16 { padding-left: 16px; }
+.pl-24 { padding-left: 24px; }
+.pl-32 { padding-left: 32px; }
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+/* Flex Utilities */
+.flex-1 {
+  flex: 1;
+}
+
+/* Background Utilities */
+.bg-100 {
+  background-color: var(--bg-100);
+}
+.bg-200 {
+  background-color: var(--bg-200);
+}
+.bg-200-hover {
+  background-color: var(--bg-200-hover);
+}
+
+/* White Background Utilities */
+.bg-white-10 {
+  background-color: var(--white-10);
+}
+.bg-white-5 {
+  background-color: var(--white-5);
+}
+.bg-white-8 {
+  background-color: var(--white-8);
+}
+
+/* Color Background Utilities */
+.bg-blue-100 {
+  background-color: var(--blue-100);
+}
+.bg-blue-80 {
+  background-color: var(--blue-80);
+}
+.bg-blue-50 {
+  background-color: var(--blue-50);
+}
+.bg-blue-20 {
+  background-color: var(--blue-20);
+}
+
+.bg-red-100 {
+  background-color: var(--red-100);
+}
+.bg-red-80 {
+  background-color: var(--red-80);
+}
+.bg-red-50 {
+  background-color: var(--red-50);
+}
+.bg-red-20 {
+  background-color: var(--red-20);
+}
+
+.bg-green-100 {
+  background-color: var(--green-100);
+}
+.bg-green-80 {
+  background-color: var(--green-80);
+}
+.bg-green-50 {
+  background-color: var(--green-50);
+}
+.bg-green-20 {
+  background-color: var(--green-20);
+}
+
+.bg-orange-100 {
+  background-color: var(--orange-100);
+}
+.bg-orange-80 {
+  background-color: var(--orange-80);
+}
+.bg-orange-50 {
+  background-color: var(--orange-50);
+}
+.bg-orange-20 {
+  background-color: var(--orange-20);
 }
 
 /* ====================================================================
@@ -678,4 +931,80 @@ main {
 
 .hidden {
   display: none;
+}
+
+.cover-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* ====================================================================
+   COMPONENT: LOGIN PAGE
+   ==================================================================== */
+
+/* Login Container & Columns */
+.login-container {
+  width: 1140px;
+  max-width: 90vw;
+  margin: 0 auto;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  height: auto;
+}
+
+.login-column-left {
+  width: 50%;
+  background-color: var(--bg-200);
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.login-column-right {
+  width: 50%;
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  align-items: center;
+  background-color: var(--bg-100);
+  min-height: 500px;
+}
+
+/* Campus Grid Component */
+.campus-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.campus-item {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background-color: var(--bg-200);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+}
+
+.campus-item:hover {
+  background-color: var(--bg-200-hover);
+}
+
+.title-icon {
+  font-size: 35px;
+  color: var(--white-90);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
