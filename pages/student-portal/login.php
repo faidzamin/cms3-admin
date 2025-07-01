@@ -4,11 +4,11 @@ include('../../partials/html-head.php');
 ?>
 
 <main class="main-login">
-  <div class="content items-center center gap-32">
+  <div class="login-content">
     <div class="login-container">
       <!-- Left column (image placeholder) -->
       <div class="login-column-left">
-        <img src="../../assets/images/student-portal/ABC_9070-01.jpg" alt="Student Portal" class="cover-image">
+        <img src="../../assets/images/student-portal/ABC_9070-01.jpg" alt="Student Portal" class="cover-image img-position-top">
       </div>
 
       <!-- Right column -->
@@ -28,7 +28,7 @@ include('../../partials/html-head.php');
           <!-- 4. Campus Grid -->
           <div class="campus-grid">
             <!-- Malaysia -->
-            <div class="campus-item">
+            <a href="#" class="campus-item">
               <div class="title-icon">
                 <iconify-icon icon="emojione-v1:flag-for-malaysia" class="icon"></iconify-icon>
               </div>
@@ -36,10 +36,10 @@ include('../../partials/html-head.php');
                 <h5>Malaysia</h5>
                 <small>Cyberjaya</small>
               </div>
-            </div>
+            </a>
 
             <!-- Botswana -->
-            <div class="campus-item">
+            <a href="#" class="campus-item">
               <div class="title-icon">
                 <iconify-icon icon="emojione-v1:flag-for-botswana" class="icon"></iconify-icon>
               </div>
@@ -47,10 +47,10 @@ include('../../partials/html-head.php');
                 <h5>Botswana</h5>
                 <small>Gaborone</small>
               </div>
-            </div>
+            </a>
 
             <!-- Cambodia -->
-            <div class="campus-item">
+            <a href="#" class="campus-item">
               <div class="title-icon">
                 <iconify-icon icon="emojione-v1:flag-for-cambodia" class="icon"></iconify-icon>
               </div>
@@ -58,10 +58,10 @@ include('../../partials/html-head.php');
                 <h5>Cambodia</h5>
                 <small>Phnom Penh</small>
               </div>
-            </div>
+            </a>
 
             <!-- eSwatini -->
-            <div class="campus-item">
+            <a href="#" class="campus-item">
               <div class="title-icon">
                 <iconify-icon icon="emojione-v1:flag-for-swaziland" class="icon"></iconify-icon>
               </div>
@@ -69,10 +69,10 @@ include('../../partials/html-head.php');
                 <h5>eSwatini</h5>
                 <small>Mbabane</small>
               </div>
-            </div>
+            </a>
 
             <!-- Lesotho -->
-            <div class="campus-item">
+            <a href="#" class="campus-item">
               <div class="title-icon">
                 <iconify-icon icon="emojione-v1:flag-for-lesotho" class="icon"></iconify-icon>
               </div>
@@ -80,10 +80,10 @@ include('../../partials/html-head.php');
                 <h5>Lesotho</h5>
                 <small>Maseru</small>
               </div>
-            </div>
+            </a>
 
             <!-- Namibia -->
-            <div class="campus-item">
+            <a href="#" class="campus-item">
               <div class="title-icon">
                 <iconify-icon icon="emojione-v1:flag-for-namibia" class="icon"></iconify-icon>
               </div>
@@ -91,10 +91,10 @@ include('../../partials/html-head.php');
                 <h5>Namibia</h5>
                 <small>Windhoek</small>
               </div>
-            </div>
+            </a>
 
             <!-- Uganda -->
-            <div class="campus-item">
+            <a href="#" class="campus-item">
               <div class="title-icon">
                 <iconify-icon icon="emojione-v1:flag-for-uganda" class="icon"></iconify-icon>
               </div>
@@ -102,10 +102,10 @@ include('../../partials/html-head.php');
                 <h5>Uganda</h5>
                 <small>Kampala</small>
               </div>
-            </div>
+            </a>
 
             <!-- Sierra Leone -->
-            <div class="campus-item">
+            <a href="#" class="campus-item">
               <div class="title-icon">
                 <iconify-icon icon="emojione-v1:flag-for-sierra-leone" class="icon"></iconify-icon>
               </div>
@@ -113,7 +113,7 @@ include('../../partials/html-head.php');
                 <h5>Sierra Leone</h5>
                 <small>Freetown</small>
               </div>
-            </div>
+            </a>
           </div>
         </div>
       </div>

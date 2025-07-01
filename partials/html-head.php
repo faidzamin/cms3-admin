@@ -19,7 +19,13 @@
   <link rel="stylesheet" href="../../styles/reset.css?v=<?= time() ?>" />
   <link rel="stylesheet" href="../../styles/colors.css?v=<?= time() ?>" />
   <link rel="stylesheet" href="../../styles/typography.css?v=<?= time() ?>" />
+  <link rel="stylesheet" href="../../styles/utilities.css?v=<?= time() ?>" />
   <link rel="stylesheet" href="../../styles/main.css?v=<?= time() ?>" />
+
+  <?php if (strpos($_SERVER['PHP_SELF'], 'student-portal/login.php') !== false): ?>
+    <!-- Login Page Styles -->
+    <link rel="stylesheet" href="../../styles/login.css?v=<?= time() ?>" />
+  <?php endif; ?>
 
   <!-- Scripts -->
   <link rel="modulepreload" href="../../scripts/iconify-icon.min.js">

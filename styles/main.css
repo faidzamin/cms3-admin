@@ -10,9 +10,14 @@ body {
   min-height: 100vh;
   flex: 1;
   font-family: "Rubik", sans-serif;
-  overflow: hidden;
+  overflow: auto;
 }
 
+/* ====================================================================
+   LAYOUT COMPONENTS
+   ==================================================================== */
+
+/* Main Content Area */
 main {
   background-color: var(--bg-100);
   background-image: radial-gradient(var(--white-5) 1px, transparent 0);
@@ -22,19 +27,13 @@ main {
   padding: 0;
   border: 1px solid var(--border);
   border-radius: 12px;
-  overflow: hidden;
+  overflow: auto;
   display: flex;
   flex: 1;
   flex-direction: column;
 }
 
-/* Login page specific main element styling */
-.main-login {
-  border: none;
-  margin: 0;
-  border-radius: 0;
-}
-
+/* Top Navigation Bar */
 .top-bar {
   background-color: var(--bg-100);
   padding: 12px 16px;
@@ -74,6 +73,7 @@ main {
   height: 100%;
 }
 
+/* Content Container */
 .content {
   display: flex;
   flex-direction: column;
@@ -91,328 +91,14 @@ main {
 }
 
 /* ====================================================================
-   LAYOUT UTILITIES
+   COMPONENT: LOGO
    ==================================================================== */
 
-/* Base Container Classes */
-.container {
+.logo {
   display: flex;
-  flex-shrink: 1;
-  width: 100%;
-}
-
-.container-column {
-  display: flex;
-  flex-direction: column;
-  flex-shrink: 1;
-  width: 100%;
-}
-
-.container-row {
-  display: flex;
-  flex-direction: row;
-  height: auto;
-  width: 100%;
-}
-
-/* Gap Utilities */
-.gap-0 {
-  gap: 0px;
-}
-.gap-2 {
-  gap: 2px;
-}
-.gap-4 {
-  gap: 4px;
-}
-.gap-8 {
-  gap: 8px;
-}
-.gap-12 {
-  gap: 12px;
-}
-.gap-16 {
-  gap: 16px;
-}
-.gap-24 {
-  gap: 24px;
-}
-.gap-32 {
-  gap: 32px;
-}
-
-/* General Alignment & Sizing Utilities */
-.padding-0 {
-  padding: 0;
-}
-.transparent {
-  opacity: 0;
-}
-.fullwidth {
-  width: 100%;
-}
-.space-between {
-  justify-content: space-between;
-}
-.center {
-  justify-content: center;
-}
-.items-center {
   align-items: center;
-}
-
-/* Border Radius Utilities */
-.radius-0 {
-  border-radius: 0;
-}
-.radius-4 {
-  border-radius: 4px;
-}
-.radius-8 {
-  border-radius: 8px;
-}
-.radius-12 {
-  border-radius: 12px;
-}
-.radius-16 {
-  border-radius: 16px;
-}
-.radius-full {
-  border-radius: 9999px;
-}
-
-/* Border Utilities */
-.border-none {
-  border: none;
-}
-.border {
-  border: 1px solid var(--border);
-}
-.border-2 {
-  border: 2px solid var(--border);
-}
-.border-top {
-  border-top: 1px solid var(--border);
-}
-.border-right {
-  border-right: 1px solid var(--border);
-}
-.border-bottom {
-  border-bottom: 1px solid var(--border);
-}
-.border-left {
-  border-left: 1px solid var(--border);
-}
-
-/* Width & Height Utilities */
-.w-full {
-  width: 100%;
-}
-.w-auto {
-  width: auto;
-}
-.h-full {
-  height: 100%;
-}
-.h-auto {
-  height: auto;
-}
-
-/* Margin & Padding Utilities */
-.m-auto {
-  margin: auto;
-}
-.mx-auto {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* Padding Utilities */
-.p-0 {
-  padding: 0;
-}
-.p-4 {
-  padding: 4px;
-}
-.p-8 {
-  padding: 8px;
-}
-.p-12 {
-  padding: 12px;
-}
-.p-16 {
-  padding: 16px;
-}
-.p-24 {
-  padding: 24px;
-}
-.p-32 {
-  padding: 32px;
-}
-
-/* Padding X-axis (left & right) */
-.px-4 {
-  padding-left: 4px;
-  padding-right: 4px;
-}
-.px-8 {
-  padding-left: 8px;
-  padding-right: 8px;
-}
-.px-12 {
-  padding-left: 12px;
-  padding-right: 12px;
-}
-.px-16 {
-  padding-left: 16px;
-  padding-right: 16px;
-}
-.px-24 {
-  padding-left: 24px;
-  padding-right: 24px;
-}
-.px-32 {
-  padding-left: 32px;
-  padding-right: 32px;
-}
-
-/* Padding Y-axis (top & bottom) */
-.py-4 {
-  padding-top: 4px;
-  padding-bottom: 4px;
-}
-.py-8 {
-  padding-top: 8px;
-  padding-bottom: 8px;
-}
-.py-12 {
-  padding-top: 12px;
-  padding-bottom: 12px;
-}
-.py-16 {
-  padding-top: 16px;
-  padding-bottom: 16px;
-}
-.py-24 {
-  padding-top: 24px;
-  padding-bottom: 24px;
-}
-.py-32 {
-  padding-top: 32px;
-  padding-bottom: 32px;
-}
-
-/* Individual Padding Sides */
-.pt-4 { padding-top: 4px; }
-.pt-8 { padding-top: 8px; }
-.pt-12 { padding-top: 12px; }
-.pt-16 { padding-top: 16px; }
-.pt-24 { padding-top: 24px; }
-.pt-32 { padding-top: 32px; }
-
-.pr-4 { padding-right: 4px; }
-.pr-8 { padding-right: 8px; }
-.pr-12 { padding-right: 12px; }
-.pr-16 { padding-right: 16px; }
-.pr-24 { padding-right: 24px; }
-.pr-32 { padding-right: 32px; }
-
-.pb-4 { padding-bottom: 4px; }
-.pb-8 { padding-bottom: 8px; }
-.pb-12 { padding-bottom: 12px; }
-.pb-16 { padding-bottom: 16px; }
-.pb-24 { padding-bottom: 24px; }
-.pb-32 { padding-bottom: 32px; }
-
-.pl-4 { padding-left: 4px; }
-.pl-8 { padding-left: 8px; }
-.pl-12 { padding-left: 12px; }
-.pl-16 { padding-left: 16px; }
-.pl-24 { padding-left: 24px; }
-.pl-32 { padding-left: 32px; }
-
-.overflow-hidden {
-  overflow: hidden;
-}
-
-/* Flex Utilities */
-.flex-1 {
-  flex: 1;
-}
-
-/* Background Utilities */
-.bg-100 {
-  background-color: var(--bg-100);
-}
-.bg-200 {
-  background-color: var(--bg-200);
-}
-.bg-200-hover {
-  background-color: var(--bg-200-hover);
-}
-
-/* White Background Utilities */
-.bg-white-10 {
-  background-color: var(--white-10);
-}
-.bg-white-5 {
-  background-color: var(--white-5);
-}
-.bg-white-8 {
-  background-color: var(--white-8);
-}
-
-/* Color Background Utilities */
-.bg-blue-100 {
-  background-color: var(--blue-100);
-}
-.bg-blue-80 {
-  background-color: var(--blue-80);
-}
-.bg-blue-50 {
-  background-color: var(--blue-50);
-}
-.bg-blue-20 {
-  background-color: var(--blue-20);
-}
-
-.bg-red-100 {
-  background-color: var(--red-100);
-}
-.bg-red-80 {
-  background-color: var(--red-80);
-}
-.bg-red-50 {
-  background-color: var(--red-50);
-}
-.bg-red-20 {
-  background-color: var(--red-20);
-}
-
-.bg-green-100 {
-  background-color: var(--green-100);
-}
-.bg-green-80 {
-  background-color: var(--green-80);
-}
-.bg-green-50 {
-  background-color: var(--green-50);
-}
-.bg-green-20 {
-  background-color: var(--green-20);
-}
-
-.bg-orange-100 {
-  background-color: var(--orange-100);
-}
-.bg-orange-80 {
-  background-color: var(--orange-80);
-}
-.bg-orange-50 {
-  background-color: var(--orange-50);
-}
-.bg-orange-20 {
-  background-color: var(--orange-20);
+  line-height: 1;
+  color: var(--white-90);
 }
 
 /* ====================================================================
@@ -479,17 +165,6 @@ main {
 }
 
 /* ====================================================================
-   COMPONENT: LOGO
-   ==================================================================== */
-
-.logo {
-  display: flex;
-  align-items: center;
-  line-height: 1;
-  color: var(--white-90);
-}
-
-/* ====================================================================
    COMPONENT: BUTTONS
    ==================================================================== */
 
@@ -517,6 +192,7 @@ main {
   font-size: 22px;
 }
 
+/* Button Variants */
 /* Primary Button - Solid Blue Background */
 .btn-primary {
   background: var(--blue-100);
@@ -659,102 +335,35 @@ main {
 }
 
 /* ====================================================================
-   COMPONENT: TABLES
+   COMPONENT: FORM ELEMENTS
    ==================================================================== */
 
-.table-wrapper {
+/* Input Fields */
+.input-field {
+  background-color: var(--bg-100);
   border: 1px solid var(--border);
-  border-radius: 12px;
-  overflow: hidden;
+  color: var(--white-90);
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-family: "Rubik", sans-serif;
 }
 
-.table {
-  width: 100%;
-  border-collapse: collapse;
+.input-field:focus {
+  outline: 2px solid var(--blue-100);
+}
+
+/* Labels */
+.label {
   font-family: "Rubik", sans-serif;
-  font-size: 14px;
+  font-size: 12px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  color: var(--white-90);
-  background-color: var(--bg-200);
-  border: none;
-}
-
-.table thead {
-  background-color: var(--white-10);
-  border-bottom: 1px solid var(--white-20);
-}
-
-.table thead th {
-  text-align: left;
-  font-weight: 400;
-  padding: 12px 16px;
+  padding: 2px 0;
   color: var(--white-60);
-  white-space: nowrap;
 }
 
-.table tbody tr {
-  border-bottom: 1px solid var(--border);
-}
-
-.table tbody tr:last-child {
-  border-bottom: none;
-}
-
-.table tbody td {
-  padding: 12px 16px;
-  color: var(--white-90);
-  vertical-align: middle;
-}
-
-.table tbody tr:hover {
-  background-color: var(--white-5);
-}
-
-/* Table Cell Utilities */
-.cell-center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.cell-between {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 8px;
-}
-
-.cell-end {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  gap: 8px;
-}
-
-.cell-start {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 8px;
-}
-
-.cell-nowrap {
-  white-space: nowrap;
-}
-
-.cell-actions {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 8px;
-}
-
-/* ====================================================================
-   COMPONENT: DROPDOWNS
-   ==================================================================== */
-
+/* Dropdowns */
 .dropdown {
   position: relative;
   font-family: "Rubik", sans-serif;
@@ -858,6 +467,99 @@ main {
 }
 
 /* ====================================================================
+   COMPONENT: TABLES
+   ==================================================================== */
+
+.table-wrapper {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: "Rubik", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  color: var(--white-90);
+  background-color: var(--bg-200);
+  border: none;
+}
+
+.table thead {
+  background-color: var(--white-10);
+  border-bottom: 1px solid var(--white-20);
+}
+
+.table thead th {
+  text-align: left;
+  font-weight: 400;
+  padding: 12px 16px;
+  color: var(--white-60);
+  white-space: nowrap;
+}
+
+.table tbody tr {
+  border-bottom: 1px solid var(--border);
+}
+
+.table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.table tbody td {
+  padding: 12px 16px;
+  color: var(--white-90);
+  vertical-align: middle;
+}
+
+.table tbody tr:hover {
+  background-color: var(--white-5);
+}
+
+/* Table Cell Utilities */
+.cell-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cell-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+
+.cell-end {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 8px;
+}
+
+.cell-start {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 8px;
+}
+
+.cell-nowrap {
+  white-space: nowrap;
+}
+
+.cell-actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+/* ====================================================================
    COMPONENT: MODALS
    ==================================================================== */
 
@@ -899,112 +601,20 @@ main {
 }
 
 /* ====================================================================
-   COMPONENT: INPUT FIELDS & LABELS
+   MOBILE STYLES
    ==================================================================== */
 
-.input-field {
-  background-color: var(--bg-100);
-  border: 1px solid var(--border);
-  color: var(--white-90);
-  border-radius: 8px;
-  padding: 8px 12px;
-  font-family: "Rubik", sans-serif;
-}
+/* Mobile Styles (< 768px) */
+@media screen and (max-width: 768px) {
+  html, body {
+    height: auto;
+    min-height: 100%;
+    overflow-y: auto;
+    padding: 0;
+    -webkit-overflow-scrolling: touch;
+  }
 
-.input-field:focus {
-  outline: 2px solid var(--blue-100);
-}
-
-.label {
-  font-family: "Rubik", sans-serif;
-  font-size: 12px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  padding: 2px 0;
-  color: var(--white-60);
-}
-
-/* ====================================================================
-   UTILITY: MISCELLANEOUS
-   ==================================================================== */
-
-.hidden {
-  display: none;
-}
-
-.cover-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-}
-
-/* ====================================================================
-   COMPONENT: LOGIN PAGE
-   ==================================================================== */
-
-/* Login Container & Columns */
-.login-container {
-  width: 1140px;
-  max-width: 90vw;
-  margin: 0 auto;
-  border: 1px solid var(--border);
-  border-radius: 16px;
-  overflow: hidden;
-  display: flex;
-  flex-direction: row;
-  height: auto;
-}
-
-.login-column-left {
-  width: 50%;
-  background-color: var(--bg-200);
-  min-height: 500px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-}
-
-.login-column-right {
-  width: 50%;
-  padding: 60px;
-  display: flex;
-  flex-direction: column;
-  gap: 48px;
-  align-items: center;
-  background-color: var(--bg-100);
-  min-height: 500px;
-}
-
-/* Campus Grid Component */
-.campus-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 12px;
-}
-
-.campus-item {
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  background-color: var(--bg-200);
-  padding: 16px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 12px;
-  cursor: pointer;
-}
-
-.campus-item:hover {
-  background-color: var(--bg-200-hover);
-}
-
-.title-icon {
-  font-size: 35px;
-  color: var(--white-90);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  body {
+    position: relative;
+  }
 }

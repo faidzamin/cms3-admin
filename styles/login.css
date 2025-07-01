@@ -1,0 +1,232 @@
+/* ====================================================================
+   LOGIN PAGE STYLES
+   ==================================================================== */
+
+/* Main Login Container */
+.main-login {
+  border: none;
+  margin: 0;
+  border-radius: 0;
+  overflow: auto;
+}
+
+/* Login Content Container */
+.login-content {
+  display: flex;
+  flex-direction: column;
+  padding: 60px 0;
+  width: 100%;
+  flex: 1;
+  gap: 32px;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Login Container & Columns */
+.login-container {
+  width: 1140px;
+  max-width: 90vw;
+  margin: 0 auto;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  height: auto;
+}
+
+.login-column-left {
+  width: 50%;
+  background-color: var(--bg-200);
+  min-height: 360px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.login-column-right {
+  width: 50%;
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  align-items: center;
+  background-color: var(--bg-100);
+  min-height: 500px;
+}
+
+/* Campus Grid Component */
+.campus-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.campus-item {
+  position: relative;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background-color: var(--bg-200);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.campus-item:hover {
+  background-color: var(--bg-200-hover);
+}
+
+/* Pulsing border animation */
+.campus-item::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(
+    transparent, 
+    var(--white-20-s),
+    var(--white-50-s),
+    transparent
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 0;
+}
+
+.campus-item:hover::before {
+  opacity: 1;
+  animation: rotate 2s linear infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.campus-item::after {
+  content: '';
+  position: absolute;
+  inset: 1px;
+  background-color: var(--bg-200);
+  border-radius: 7px;
+  z-index: 1;
+  transition: background-color 0.3s ease;
+}
+
+.campus-item:hover::after {
+  background-color: var(--bg-200-hover);
+}
+
+.campus-item > * {
+  position: relative;
+  z-index: 2;
+}
+
+.title-icon {
+  font-size: 35px;
+  color: var(--white-90);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ====================================================================
+   RESPONSIVE STYLES
+   ==================================================================== */
+
+/* Tablet Styles (768px - 1024px) */
+@media screen and (max-width: 1024px) {
+  .login-container {
+    width: 90vw;
+    max-width: 800px;
+  }
+  
+  .login-column-right {
+    padding: 40px;
+  }
+  
+  .campus-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile Styles (< 768px) */
+@media screen and (max-width: 768px) {
+  .main-login {
+    height: auto;
+    min-height: 100%;
+    padding: 0px 0px 32px 0px;
+    overflow: visible;
+  }
+
+  .login-content {
+    padding: 0;
+    gap: 24px;
+    overflow: visible;
+    height: auto;
+  }
+
+  .login-container {
+    flex-direction: column;
+    width: 100%;
+    margin: 0;
+    border: none;
+    border-radius: 0;
+    height: auto;
+    overflow: hidden;
+  }
+  
+  .login-column-left {
+    width: 100%;
+    height: 360px;
+    overflow: hidden;
+  }
+  
+  .login-column-right {
+    width: 100%;
+    padding: 32px;
+    gap: 24px;
+    min-height: auto;
+    background-color: transparent;
+  }
+
+  .logo {
+    margin-bottom: 8px;
+  }
+  
+  /* Mobile campus grid */
+  .campus-grid {
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    max-width: 100%;
+    gap: 12px;
+  }
+
+  /* Campus items as buttons */
+  .campus-item {
+    padding: 12px;
+    gap: 8px;
+    text-decoration: none;
+  }
+
+  .campus-item::before,
+  .campus-item::after {
+    display: none; /* Remove animation elements */
+  }
+  
+  .container-column.gap-24 {
+    gap: 16px;
+  }
+} 
