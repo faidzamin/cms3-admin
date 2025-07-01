@@ -1,31 +1,38 @@
 <?php
+$config_path = $_SERVER['DOCUMENT_ROOT'] . '/cms3/config.php';
+if (file_exists($config_path)) {
+  include_once($config_path);
+} else {
+  define('BASE_URL', '/cms3/');
+}
+
 $page_title = "LKW Student Portal";
-include('../../partials/html-head.php');
+include('../../../partials/html-head.php');
 ?>
 
 <main class="main-login">
   <div class="login-content">
     <div class="login-container">
-      <!-- Left column (image placeholder) -->
+      <!-- Left column -->
       <div class="login-column-left">
-        <img src="../../assets/images/student-portal/ABC_9070-01.jpg" alt="Student Portal" class="cover-image img-position-top">
+        <img src="<?= BASE_URL ?>assets/images/student-portal/ABC_9070-01.jpg" alt="Student Portal" class="cover-image img-position-top">
       </div>
 
       <!-- Right column -->
       <div class="login-column-right">
-        <!-- 1. Logo -->
+        <!-- Logo -->
         <div class="logo">
-          <img src="../../assets/images/common/lkw-logo-no-bg.svg" alt="LKW Logo" height="70">
+          <img src="<?= BASE_URL ?>assets/images/common/lkw-logo-no-bg.svg" alt="LKW Logo" height="70">
         </div>
 
         <div class="container-column gap-24 items-center">
-          <!-- 2. Title -->
+          <!-- Title -->
           <h2>Student Portal</h2>
 
-          <!-- 3. Subtitle -->
+          <!-- Subtitle -->
           <p>Select Campus :</p>
 
-          <!-- 4. Campus Grid -->
+          <!-- Campus Grid -->
           <div class="campus-grid">
             <!-- Malaysia -->
             <a href="#" class="campus-item">
@@ -123,4 +130,4 @@ include('../../partials/html-head.php');
   </div>
 </main>
 
-<?php include('../../partials/html-foot.php'); ?>
+<?php include('../../../partials/html-foot.php'); ?>
