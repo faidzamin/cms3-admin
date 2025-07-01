@@ -7,7 +7,7 @@ if (file_exists($config_path)) {
 }
 
 $page_title = "LKW Student Portal";
-include('../../../partials/html-head.php');
+include($_SERVER['DOCUMENT_ROOT'] . BASE_URL . 'partials/html-head.php');
 ?>
 
 <main class="main-login">
@@ -130,4 +130,4 @@ include('../../../partials/html-head.php');
   </div>
 </main>
 
-<?php include('../../../partials/html-foot.php'); ?>
+<?php include($_SERVER['DOCUMENT_ROOT'] . BASE_URL . 'partials/html-foot.php'); ?>

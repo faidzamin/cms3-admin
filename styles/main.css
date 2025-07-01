@@ -11,6 +11,52 @@ body {
   flex: 1;
   font-family: "Rubik", sans-serif;
   overflow: auto;
+  
+  /* Add anti-aliasing for smoother text rendering */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* Text Selection Styling */
+::selection {
+  background-color: var(--blue-50);
+  color: var(--white-100);
+}
+
+::-moz-selection {
+  background-color: var(--blue-50);
+  color: var(--white-100);
+}
+
+/* Input Box Selection */
+.input-box::selection {
+  background-color: var(--blue-80);
+  color: var(--white-100);
+}
+
+.input-box::-moz-selection {
+  background-color: var(--blue-80);
+  color: var(--white-100);
+}
+
+/* SVG Sharpness Enhancement */
+svg {
+  shape-rendering: geometricPrecision;
+  text-rendering: geometricPrecision;
+  image-rendering: optimizeQuality;
+}
+
+/* For SVGs used as background images */
+.svg-background {
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  image-rendering: crisp-edges;
+}
+
+/* For icon fonts that use SVG (like Iconify) */
+iconify-icon {
+  filter: drop-shadow(0 0 0 currentColor);
 }
 
 /* ====================================================================
@@ -182,6 +228,7 @@ main {
   font-weight: 400;
   line-height: normal;
   border: 1px solid transparent;
+  box-sizing: border-box;
 }
 
 .btn span {
@@ -202,6 +249,17 @@ main {
 
 .btn-primary:hover {
   background-color: var(--blue-80);
+}
+
+/* Secondary Button - Dark Background */
+.btn-secondary {
+  background: var(--white-10);
+  color: var(--white-90);
+}
+
+.btn-secondary:hover {
+  background-color: var(--white-20);
+  color: var(--white-90);
 }
 
 /* Ghost Button - Transparent Background */
@@ -344,12 +402,117 @@ main {
   border: 1px solid var(--border);
   color: var(--white-90);
   border-radius: 8px;
-  padding: 8px 12px;
+  padding: 5px 12px;
   font-family: "Rubik", sans-serif;
+  box-sizing: border-box;
 }
 
-.input-field:focus {
-  outline: 2px solid var(--blue-100);
+/* Input Fields (Box) */
+.input-box {
+  background-color: transparent;
+  border: 1px solid var(--white-10-s);
+  color: var(--white-90);
+  border-radius: 8px;
+  padding: 28px 12px 8px 12px;
+  font-family: "Rubik", sans-serif;
+  font-size: 16px;
+  width: 100%;
+  transition: all 0.2s ease;
+  box-sizing: border-box;
+}
+
+.input-box:focus {
+  outline: none;
+  border-color: var(--blue-100);
+}
+
+/* Input container with label inside */
+.input-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+/* Pulsing border animation */
+.input-container::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(
+    transparent 0%,
+    transparent 30%,
+    var(--white-20-s) 40%,
+    var(--white-50-s) 50%,
+    var(--white-80-s) 55%,
+    var(--white-50-s) 60%,
+    var(--white-20-s) 70%,
+    transparent 80%,
+    transparent 100%
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 0;
+  filter: blur(5px);
+}
+
+.input-container:hover::before {
+  opacity: 0.8;
+  animation: rotate 6s linear infinite;
+}
+
+.input-container:focus-within::before {
+  opacity: 0;
+  animation: none;
+}
+
+.input-container:focus-within label {
+  color: var(--blue-100);
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Background layer with cutout for border */
+.input-container::after {
+  content: '';
+  position: absolute;
+  inset: 2px;
+  background-color: var(--bg-100);
+  border-radius: 7px;
+  z-index: 1;
+}
+
+.input-container label {
+  position: absolute;
+  left: 12px;
+  top: 8px;
+  font-size: 12px;
+  color: var(--white-40);
+  pointer-events: none;
+  z-index: 3;
+  transition: color 0.3s ease;
+}
+
+/* Input Placeholder Styling */
+.input-field::placeholder {
+  font-family: "Rubik", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  padding: 2.5px 0;
+  color: var(--white-20);
+  opacity: 1;
 }
 
 /* Labels */
@@ -601,6 +764,70 @@ main {
 }
 
 /* ====================================================================
+   COMPONENT: PILLS
+   ==================================================================== */
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background-color: var(--bg-200);
+  border: 1px solid var(--border);
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  color: var(--white-40);
+  white-space: nowrap;
+}
+
+/* Plain color pills */
+.pill-plain {
+  background-color: var(--white-10);
+  border-color: var(--white-20);
+  color: var(--white-60);
+}
+
+.pill-plain-light {
+  background-color: var(--white-5);
+  border-color: var(--white-10);
+  color: var(--white-60);
+}
+
+.pill-plain-dark {
+  background-color: var(--bg-200);
+  border-color: var(--white-15);
+  color: var(--white-60);
+}
+
+/* Colored pills */
+.pill-primary {
+  background-color: var(--blue-20);
+  border-color: var(--blue-50);
+  color: var(--blue-100);
+}
+
+.pill-success {
+  background-color: var(--green-20);
+  border-color: var(--green-50);
+  color: var(--green-100);
+}
+
+.pill-warning {
+  background-color: var(--orange-20);
+  border-color: var(--orange-50);
+  color: var(--orange-100);
+}
+
+.pill-danger {
+  background-color: var(--red-20);
+  border-color: var(--red-50);
+  color: var(--red-100);
+}
+
+/* ====================================================================
    MOBILE STYLES
    ==================================================================== */
 
@@ -617,4 +844,11 @@ main {
   body {
     position: relative;
   }
+}
+
+/* Ensure input is above animation but below label */
+.input-container input {
+  position: relative;
+  z-index: 2;
+  background: transparent;
 }

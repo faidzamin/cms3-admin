@@ -34,7 +34,7 @@
   <link rel="stylesheet" href="<?= BASE_URL ?>styles/utilities.css?v=<?= time() ?>" />
   <link rel="stylesheet" href="<?= BASE_URL ?>styles/main.css?v=<?= time() ?>" />
 
-  <?php if (strpos($_SERVER['PHP_SELF'], 'student-portal/login/select-campus.php') !== false): ?>
+  <?php if (strpos($_SERVER['PHP_SELF'], 'student-portal/login/') !== false): ?>
     <!-- Login Page Styles -->
     <link rel="stylesheet" href="<?= BASE_URL ?>styles/login.css?v=<?= time() ?>" />
   <?php endif; ?>
