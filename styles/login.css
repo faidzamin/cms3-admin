@@ -32,7 +32,7 @@
   overflow: hidden;
   display: flex;
   flex-direction: row;
-  height: auto;
+  height: 720px;
 }
 
 .login-column-left {

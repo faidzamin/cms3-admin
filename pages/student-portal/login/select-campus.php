@@ -35,7 +35,7 @@ include($_SERVER['DOCUMENT_ROOT'] . BASE_URL . 'partials/html-head.php');
           <!-- Campus Grid -->
           <div class="campus-grid">
             <!-- Malaysia -->
-            <a href="#" class="campus-item">
+            <a href="<?= BASE_URL ?>pages/student-portal/login/malaysia.php" class="campus-item">
               <div class="title-icon">
                 <iconify-icon icon="emojione-v1:flag-for-malaysia" class="icon"></iconify-icon>
               </div>
@@ -46,7 +46,7 @@ include($_SERVER['DOCUMENT_ROOT'] . BASE_URL . 'partials/html-head.php');
             </a>
 
             <!-- Botswana -->
-            <a href="#" class="campus-item">
+            <a href="<?= BASE_URL ?>pages/student-portal/login/botswana.php" class="campus-item">
               <div class="title-icon">
                 <iconify-icon icon="emojione-v1:flag-for-botswana" class="icon"></iconify-icon>
               </div>
@@ -57,7 +57,7 @@ include($_SERVER['DOCUMENT_ROOT'] . BASE_URL . 'partials/html-head.php');
             </a>
 
             <!-- Cambodia -->
-            <a href="#" class="campus-item">
+            <a href="<?= BASE_URL ?>pages/student-portal/login/cambodia.php" class="campus-item">
               <div class="title-icon">
                 <iconify-icon icon="emojione-v1:flag-for-cambodia" class="icon"></iconify-icon>
               </div>
@@ -68,7 +68,7 @@ include($_SERVER['DOCUMENT_ROOT'] . BASE_URL . 'partials/html-head.php');
             </a>
 
             <!-- eSwatini -->
-            <a href="#" class="campus-item">
+            <a href="<?= BASE_URL ?>pages/student-portal/login/eswatini.php" class="campus-item">
               <div class="title-icon">
                 <iconify-icon icon="emojione-v1:flag-for-swaziland" class="icon"></iconify-icon>
               </div>
@@ -79,7 +79,7 @@ include($_SERVER['DOCUMENT_ROOT'] . BASE_URL . 'partials/html-head.php');
             </a>
 
             <!-- Lesotho -->
-            <a href="#" class="campus-item">
+            <a href="<?= BASE_URL ?>pages/student-portal/login/lesotho.php" class="campus-item">
               <div class="title-icon">
                 <iconify-icon icon="emojione-v1:flag-for-lesotho" class="icon"></iconify-icon>
               </div>
@@ -90,7 +90,7 @@ include($_SERVER['DOCUMENT_ROOT'] . BASE_URL . 'partials/html-head.php');
             </a>
 
             <!-- Namibia -->
-            <a href="#" class="campus-item">
+            <a href="<?= BASE_URL ?>pages/student-portal/login/namibia.php" class="campus-item">
               <div class="title-icon">
                 <iconify-icon icon="emojione-v1:flag-for-namibia" class="icon"></iconify-icon>
               </div>
@@ -101,7 +101,7 @@ include($_SERVER['DOCUMENT_ROOT'] . BASE_URL . 'partials/html-head.php');
             </a>
 
             <!-- Uganda -->
-            <a href="#" class="campus-item">
+            <a href="<?= BASE_URL ?>pages/student-portal/login/uganda.php" class="campus-item">
               <div class="title-icon">
                 <iconify-icon icon="emojione-v1:flag-for-uganda" class="icon"></iconify-icon>
               </div>
@@ -112,7 +112,7 @@ include($_SERVER['DOCUMENT_ROOT'] . BASE_URL . 'partials/html-head.php');
             </a>
 
             <!-- Sierra Leone -->
-            <a href="#" class="campus-item">
+            <a href="<?= BASE_URL ?>pages/student-portal/login/sierra-leone.php" class="campus-item">
               <div class="title-icon">
                 <iconify-icon icon="emojione-v1:flag-for-sierra-leone" class="icon"></iconify-icon>
               </div>

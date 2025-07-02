@@ -242,24 +242,36 @@ main {
 /* Button Variants */
 /* Primary Button - Solid Blue Background */
 .btn-primary {
+  position: relative;
   background: var(--blue-100);
-  border-color: var(--white-0);
+  border-color: transparent;
   color: var(--white-90);
+  box-sizing: border-box;
 }
 
-.btn-primary:hover {
+.btn-primary.pulse-border::after {
+  background-color: var(--blue-100);
+}
+
+.btn-primary:hover.pulse-border::after {
   background-color: var(--blue-80);
 }
 
 /* Secondary Button - Dark Background */
 .btn-secondary {
-  background: var(--white-10);
+  position: relative;
+  background-color: var(--white-10-s);
+  border: none;
   color: var(--white-90);
+  box-sizing: border-box;
 }
 
-.btn-secondary:hover {
-  background-color: var(--white-20);
-  color: var(--white-90);
+.btn-secondary.pulse-border::after {
+  background-color: var(--white-10-s);
+}
+
+.btn-secondary:hover.pulse-border::after {
+  background-color: var(--white-15-s);
 }
 
 /* Ghost Button - Transparent Background */
@@ -359,6 +371,78 @@ main {
   visibility: visible;
 }
 
+/* Expanding Circle Button */
+.btn-expand {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 36px;
+  width: 36px;
+  border-radius: 99px;
+  background-color: var(--bg-100);
+  border: 1px solid var(--border);
+  padding: 0;
+  transition: width 0.3s ease, padding 0.3s ease, background-color 0.3s ease;
+  overflow: hidden;
+  cursor: pointer;
+  text-decoration: none;
+  z-index: 1;
+}
+
+.btn-expand .icon {
+  font-size: 22px;
+  color: var(--white-60);
+  transition: color 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.btn-expand span {
+  color: var(--white-60);
+  font-size: 14px;
+  white-space: nowrap;
+  width: 0;
+  opacity: 0;
+  overflow: hidden;
+  padding: 2.5px 0;
+  transition: opacity 0.2s ease, width 0.3s ease, margin 0.3s ease;
+}
+
+.btn-expand:hover {
+  width: auto;
+  padding: 0 12px;
+  border-color: var(--border);
+  justify-content: flex-start;
+}
+
+.btn-expand.pulse-white::before {
+  border-radius: 99px;
+}
+
+.btn-expand.pulse-white::after {
+  border-radius: 99px;
+  background-color: var(--bg-100);
+}
+
+.btn-expand:hover.pulse-white::after {
+  background-color: var(--bg-100);
+}
+
+.btn-expand .icon,
+.btn-expand span {
+  position: relative;
+  z-index: 2;
+}
+
+.btn-expand:hover span {
+  width: auto;
+  opacity: 1;
+  margin-left: 8px;
+}
+
 /* ====================================================================
    COMPONENT: LINKS
    ==================================================================== */
@@ -434,62 +518,14 @@ main {
   border-radius: 8px;
 }
 
-/* Pulsing border animation */
-.input-container::before {
-  content: '';
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: conic-gradient(
-    transparent 0%,
-    transparent 30%,
-    var(--white-20-s) 40%,
-    var(--white-50-s) 50%,
-    var(--white-80-s) 55%,
-    var(--white-50-s) 60%,
-    var(--white-20-s) 70%,
-    transparent 80%,
-    transparent 100%
-  );
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  z-index: 0;
-  filter: blur(5px);
-}
-
-.input-container:hover::before {
-  opacity: 0.8;
-  animation: rotate 6s linear infinite;
+.input-container.pulse-border::after {
+  background-color: var(--bg-100);
+  border-radius: 7px;
 }
 
 .input-container:focus-within::before {
   opacity: 0;
   animation: none;
-}
-
-.input-container:focus-within label {
-  color: var(--blue-100);
-}
-
-@keyframes rotate {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-/* Background layer with cutout for border */
-.input-container::after {
-  content: '';
-  position: absolute;
-  inset: 2px;
-  background-color: var(--bg-100);
-  border-radius: 7px;
-  z-index: 1;
 }
 
 .input-container label {
@@ -501,6 +537,17 @@ main {
   pointer-events: none;
   z-index: 3;
   transition: color 0.3s ease;
+}
+
+.input-container:focus-within label {
+  color: var(--blue-100);
+}
+
+/* Ensure input is above animation but below label */
+.input-container input {
+  position: relative;
+  z-index: 2;
+  background: transparent;
 }
 
 /* Input Placeholder Styling */
@@ -846,9 +893,86 @@ main {
   }
 }
 
-/* Ensure input is above animation but below label */
-.input-container input {
+/* ====================================================================
+   ANIMATIONS
+   ==================================================================== */
+
+/* Rotation Animation */
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Base Pulsing Border Animation */
+.pulse-border {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.pulse-border::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 0;
+  filter: blur(5px);
+}
+
+.pulse-border:hover::before {
+  opacity: 0.8;
+  animation: rotate 6s linear infinite;
+}
+
+.pulse-border::after {
+  content: '';
+  position: absolute;
+  inset: 2px;
+  border-radius: 6px;
+  z-index: 1;
+}
+
+/* Make sure button content is above the animation layers */
+.btn.pulse-border span, 
+.btn.pulse-border .icon {
   position: relative;
   z-index: 2;
-  background: transparent;
+}
+
+/* White Pulsing Border */
+.pulse-white::before {
+  background: conic-gradient(
+    transparent 0%,
+    transparent 30%,
+    var(--white-20-s) 40%,
+    var(--white-50-s) 50%,
+    var(--white-80-s) 55%,
+    var(--white-50-s) 60%,
+    var(--white-20-s) 70%,
+    transparent 80%,
+    transparent 100%
+  );
+}
+
+/* Blue Pulsing Border */
+.pulse-blue::before {
+  background: conic-gradient(
+    transparent 0%,
+    transparent 30%,
+    var(--blue-50) 40%,
+    var(--blue-80) 50%,
+    var(--blue-100) 55%,
+    var(--blue-80) 60%,
+    var(--blue-50) 70%,
+    transparent 80%,
+    transparent 100%
+  );
 }

@@ -15,7 +15,7 @@ include($_SERVER['DOCUMENT_ROOT'] . BASE_URL . 'partials/html-head.php');
     <div class="login-container">
       <!-- Left column -->
       <div class="login-column-left">
-        <img src="<?= BASE_URL ?>assets/images/student-portal/ABC_9070-01.jpg" alt="Student Portal" class="cover-image img-position-top">
+        <img src="<?= BASE_URL ?>assets/images/student-portal/malaysia-bg.jpg" alt="Student Portal" class="cover-image">
       </div>
 
       <!-- Right column -->
@@ -26,24 +26,25 @@ include($_SERVER['DOCUMENT_ROOT'] . BASE_URL . 'partials/html-head.php');
         </div>
 
         <div class="container-column gap-32 items-center">
-          <!-- Title with pill above -->
-          <div class="container-column gap-16 items-center">
-            <span class="pill pill-plain-dark">Student Portal</span>
-            <h2>Cyberjaya Campus</h2>
-          </div>
+
+          <!-- Title -->
+          <h2>Cyberjaya Campus</h2>
+
+          <!-- Subtitle -->
+          <p>Login to your account :</p>
 
           <!-- Login Form -->
-          <div class="container-column gap-24 w-full">
+          <div class="container-column gap-24 w-full login-form">
             <!-- Input Fields Container -->
             <div class="container-column gap-12">
               <!-- Student ID Field -->
-              <div class="input-container">
+              <div class="input-container pulse-border pulse-white">
                 <label>Student ID</label>
                 <input type="text" class="input-box">
               </div>
 
               <!-- Password Field -->
-              <div class="input-container">
+              <div class="input-container pulse-border pulse-white">
                 <label>Password</label>
                 <input type="password" class="input-box">
               </div>
@@ -51,14 +52,21 @@ include($_SERVER['DOCUMENT_ROOT'] . BASE_URL . 'partials/html-head.php');
 
             <!-- Button Group -->
             <div class="container-row gap-8 w-full">
-              <a href="#" class="btn btn-secondary flex-1 center"><span>Create Account</span></a>
-              <a href="#" class="btn btn-primary flex-1 center"><span>Login</span></a>
+              <a href="#" class="btn btn-secondary pulse-border pulse-white flex-1 center"><span>Create Account</span></a>
+              <a href="#" class="btn btn-primary pulse-border pulse-blue flex-1 center"><span>Login</span></a>
             </div>
 
-            <!-- Reset Password Link -->
-            <div class="container-column items-center">
+            <!-- Reset Password Link and Back Button -->
+            <div class="container-column items-center gap-16">
+              <!-- Forgot password link -->
               <a href="#" class="link-icon">
                 <span>Forgot password</span>
+              </a>
+
+              <!-- Expanding Back Button -->
+              <a href="<?= BASE_URL ?>pages/student-portal/login/select-campus.php" class="btn-expand pulse-border pulse-white">
+                <iconify-icon icon="material-symbols:arrow-back-rounded" class="icon"></iconify-icon>
+                <span>Back to campus selection</span>
               </a>
             </div>
           </div>
